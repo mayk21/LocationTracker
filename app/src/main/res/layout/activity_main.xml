@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:id="@+id/tvCurrentAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Address"
+        android:textColor="@color/black"
+        android:layout_above="@id/tvDistance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@color/white"/>
+
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnCalculateDistance"
+        android:text="Distance"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="490dp"
+        android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/btnSaveLocation"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Save Location"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/orange"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btnCalculateDistance"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate Distance"
+        android:layout_above="@id/btnSaveLocation"
+        android:backgroundTint="@color/orange"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/btnViewFavorites"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btnCalculateDistance"
+        android:layout_margin="0dp"
+        android:backgroundTint="@color/orange"
+        android:text="Favorites"
+        android:textColor="@color/black" />
+
+</RelativeLayout>
